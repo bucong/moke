@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>安装工单</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bg-grey">
+	<div class="instal-form-head flex">
+		<div class="choose-box flex">
+			<span id="start-time" class="choose-time" data-options='{"type":"date"}'>选择开始日期</span>
+			<img src="images/down_open.png"/>
+		</div>
+		<div class="choose-box flex">
+			<span id="end-time" class="choose-time" data-options='{"type":"date"}'>选择结束日期</span>
+			<img src="images/down_open.png"/>
+		</div>
+		<div class="choose-box search flex">
+			<input type="text" placeholder="客户名称" />
+			<img src="images/magnifier.png"/>
+		</div>
+	</div>
+	<ul class="instal-form height">
+		<li>
+			<div class="flex">
+				<p><span>安装时间</span>2017年11月24日</p>
+				<img src="images/look_pdf.png" class="pdf"/>
+			</div>
+			<div class="content">
+				<p><span>仪器型号</span>AFS Small</p>
+				<p><span>序列号</span>234646</p>
+				<p><span>安装类型</span>安装设备</p>
+				<p><span>管理员</span>默克纯水</p>
+				<p><span>行业</span>化工制药</p>
+				<p><span>公司</span>上海海文信息技术有限公司</p>
+			</div>
+		</li>
+		<li>
+			<div class="flex">
+				<p><span>安装时间</span>2017年11月24日</p>
+				<img src="images/look_pdf.png" class="pdf"/>
+			</div>
+			<div class="content">
+				<p><span>仪器型号</span>AFS Small</p>
+				<p><span>序列号</span>234646</p>
+				<p><span>安装类型</span>安装设备</p>
+				<p><span>管理员</span>默克纯水</p>
+				<p><span>行业</span>化工制药</p>
+				<p><span>公司</span>上海海文信息技术有限公司</p>
+			</div>
+		</li>
+		<li>
+			<div class="flex">
+				<p><span>安装时间</span>2017年11月24日</p>
+				<img src="images/look_pdf.png" class="pdf"/>
+			</div>
+			<div class="content">
+				<p><span>仪器型号</span>AFS Small</p>
+				<p><span>序列号</span>234646</p>
+				<p><span>安装类型</span>安装设备</p>
+				<p><span>管理员</span>默克纯水</p>
+				<p><span>行业</span>化工制药</p>
+				<p><span>公司</span>上海海文信息技术有限公司</p>
+			</div>
+		</li>
+	</ul>
+	<a href="map.html" class="to-map">
+		<img src="images/icon_map.png"/>
+	</a>
+	<div class="bottom-logo">
+		<img src="images/bot_logo.png"/>
+	</div>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		(function($) {
+			$.init();
+			var btns = $('.choose-time');
+			btns.each(function(i, btn) {
+				btn.addEventListener('tap', function() {
+					var optionsJson = this.getAttribute('data-options') || '{}';
+					var options = JSON.parse(optionsJson);
+					var id = this.getAttribute('id');
+					var picker = new $.DtPicker(options);
+					picker.show(function(rs) {
+						picker.dispose();
+						console.log(rs.text)
+						btn.innerHTML=rs.text;
+					});
+				}, false);
+			});
+		})(mui);
+	</script>
+</body>
+
+</html>

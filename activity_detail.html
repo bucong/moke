@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>活动详情</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<section class="detail-head">
+		<div style="background-image: url(images/img3.png);"></div>
+		<img src="images/img3.png"/>
+	</section>
+	<article class="activity-detail">
+		<section class="info">
+			<h3>顶级IP《全职高手》官方舞台剧【武汉站】荣耀第八季全明星赛</h3>
+			<div class="info-flex">
+				<table>
+					<tr><td>报名时间：</td><td>2018年01月27日-01月28日</td></tr>
+					<tr><td>活动时间：</td><td>2018年02月25日  09:00~18:00</td></tr>
+					<tr><td>活动地点：</td><td>广东省 惠州市 惠城区 惠州市惠台 学校体育馆</td></tr>
+				</table>
+				<a href="map.html">
+					<img src="images/look_map.png"/>
+				</a>
+			</div>
+		</section>
+		<section class="intro">
+			<h5>活动简介：</h5>
+			<p>活动是由共同目的联合起来并完成一定社会职能的动作的总和。活动由目的、动机和动作构成，具有完整的结构系统。苏联心理学家从20年代起就对活动进行了一系列研究。其中Α.Н.列昂节夫的活动理论对苏联心理学的发展影响很大，成为现代苏联心理学的重要理论基石。</p>
+		</section>
+		<div class="bottom-logo">
+			<img src="images/bot_logo.png"/>
+		</div>
+	</article>
+	<div class="detail-btn-spacing"></div>
+	<!--报名状态detail-sign detail-signed detail-end detail-scan-->
+	<div class="detail-btn detail-scan">
+		<button>
+			<img src="images/scan_white.png"/>
+			扫码签到
+		</button>
+	</div>
+	<div class="meng sub-info">
+		<div class="meng-box">
+			<div class="meng-close">
+				<img src="images/meng_close.png"/>
+			</div>
+			<h4>信息确认</h4>
+			<div class="form">
+				<p>姓名</p>
+				<input type="text" placeholder="请输入"/>
+				<p>手机号</p>
+				<input type="text" placeholder="请输入" />
+			</div>
+			<div class="flex">
+				<button class="sub-info-cancel">取消</button>
+				<button class="sub-info-sub">确认</button>
+			</div>
+		</div>
+	</div>
+	<div class="meng sign-success">
+		<div class="meng-box">
+			<img src="images/sign_success.png"/>
+			<h2>报名成功</h2>
+			<p>报名信息及活动详情可至 ‘个人中心’ - ‘我的活动’ 中查看</p>
+			<button>确定</button>
+		</div>
+	</div>
+	<div class="meng detail-meng-info">
+		<div class="meng-box">
+			<h2>提示</h2>
+			<p>请关注公众号“默克纯水”再进行活动报名</p>
+			<img src="images/qrcode.jpg"/>			
+			<button>确定</button>
+		</div>
+	</div>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.detail-sign').click(function(){
+			$('.sub-info').show();
+		})
+		$('.sub-info').on('click','.meng-close img',function(){
+			$('.sub-info').hide();
+		})
+		$('.sub-info').on('click','.sub-info-cancel',function(){
+			$('.sub-info').hide();
+		})
+		$('.sub-info').on('click','.sub-info-sub',function(){
+			$('.sub-info').hide();
+			alert('点击了确定')
+		})
+		$('.sign-success button').click(function(){
+			$('.sign-success').hide();
+		})
+		$('.detail-meng-info button').click(function(){
+			$('.detail-meng-info').hide();
+		})
+	</script>
+</body>
+
+</html>

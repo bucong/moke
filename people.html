@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>个人中心</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bg-grey">
+	<header class="people-head">
+		<div class="flex">
+			<img src="images/logo1.png" class="logo"/>
+			<span>编辑</span>
+		</div>
+		<img src="images/sign_success.png" class="head-img"/>	
+		<p class="name">默克化工</p>
+	</header>
+	<article class="people">
+		<ul class="info">
+			<li class="flex">
+				<span>姓名</span>
+				<div class="flex">
+					<input type="" name="" id="" disabled value="" placeholder="请输入" />
+					<img src="images/text_del.png" class="del-content"/>
+				</div>
+			</li>
+			<li class="flex">
+				<span>职位</span>
+				<div class="flex">
+					<input type="" name="" id="" disabled value="" placeholder="请输入" />
+					<img src="images/text_del.png" class="del-content"/>
+				</div>
+			</li>
+			<li class="flex">
+				<span>单位</span>
+				<div class="flex">
+					<input type="" name="" id="" disabled value="" placeholder="请输入" />
+					<img src="images/text_del.png" class="del-content"/>
+				</div>
+			</li>
+			<li class="flex">
+				<span>手机</span>
+				<div class="flex">
+					<input type="" name="" id="" disabled value="" placeholder="请输入" />
+					<img src="images/text_del.png" class="del-content"/>
+				</div>
+			</li>
+		</ul>
+		<ul class="nav">
+			<li>
+				<a href="my_instrument.html">
+					<div class="w25">
+						<img src="images/icon11.png" class="icon"/>
+					</div>
+					<div class="w75 flex">
+						<p>我的仪器</p>
+						<img src="images/angle_right.png" class="angle"/>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="integral.html">
+					<div class="w25">
+						<img src="images/icon7.png" class="icon"/>
+					</div>
+					<div class="w75 flex">
+						<p class="flex"><span>我的积分</span><label>941</label></p>
+						<img src="images/angle_right.png" class="angle"/>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="my_activity.html">
+					<div class="w25">
+						<img src="images/icon6.png" class="icon"/>
+					</div>
+					<div class="w75 flex">
+						<p>我的活动</p>
+						<img src="images/angle_right.png" class="angle"/>
+					</div>	
+				</a>
+			</li>
+		</ul>
+		<ul class="nav">
+			<li>
+				<a href="integral_mall.html">
+					<div class="w25">
+						<img src="images/icon15.png" class="icon"/>
+					</div>
+					<div class="w75 flex">
+						<p>积分商城</p>
+						<img src="images/angle_right.png" class="angle"/>
+					</div>	
+				</a>
+			</li>
+		</ul>
+		<div class="bottom-logo">
+			<img src="images/bot_logo.png"/>
+		</div>
+	</article>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.people-head span').toggle(function(){
+			$(this).html('完成');
+			$(this).css('color','#FFC832');
+			$('.people .info input').each(function(){
+				$(this).removeAttr('disabled');
+			})
+			$('.people .info .del-content').each(function(){
+				$(this).show();
+			})
+		},function(){
+			$(this).html('编辑');
+			$(this).css('color','#333');
+			$('.people .info input').each(function(){
+				$(this).attr('disabled','disabled');
+			})
+			$('.people .info .del-content').each(function(){
+				$(this).hide();
+			})
+			//保存数据到后台
+			
+		})
+		$('.people .info .del-content').click(function(){
+			$(this).prev().val('');
+		})
+	</script>
+</body>
+
+</html>

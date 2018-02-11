@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>我的积分</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bg-grey">
+	<article class="integral">
+		<header class="integral-head">
+			<div class="flex">
+				<img src="images/logo1.png" class="logo"/>
+				<div class="flex"><img src="images/guide.png" alt="" class="warn" />积分规则</div>
+			</div>
+		</header>
+		<section class="integral-tab">
+			<div class="sum">
+				<img src="images/icon8.png"/>
+				<span>506</span>
+			</div>
+			<div class="flex tab">
+				<div><span>积分详情</span></div>
+				<hr />
+				<div class="active"><span>兑换记录</span></div>
+			</div>
+		</section>
+		<section class="list">
+			<div class="tab-content">
+				
+			</div>
+			<!--不做处理-->
+			<div class="tab-content"></div>
+			<!---->
+			<ul class="tab-content">
+				<li class="flex">
+					<img src="images/head_grey.png"/>
+					<div>
+						<h5>三诺血糖测试仪</h5>
+						<p>兑换日期：2017年12月12日  11:35</p>
+					</div>
+					<span>-941</span>
+				</li>
+				<li class="flex">
+					<img src="images/head_grey.png"/>
+					<div>
+						<h5>三诺血糖测试仪</h5>
+						<p>兑换日期：2017年12月12日  11:35</p>
+					</div>
+					<span>-941</span>
+				</li>
+				<li class="flex">
+					<img src="images/head_grey.png"/>
+					<div>
+						<h5>三诺血糖测试仪</h5>
+						<p>兑换日期：2017年12月12日  11:35</p>
+					</div>
+					<span>-941</span>
+				</li>
+			</ul>
+		</section>
+		<div class="bottom-logo">
+			<img src="images/bot_logo.png"/>
+		</div>
+	</article>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.integral-tab .tab div').click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			$('.list .tab-content').eq($(this).index()).show().siblings().hide();
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>耗材管理</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="bg-grey">
+	<ul class="consumptive-material height">
+		<li>
+			<h4 class="one-line"><span class="red">即将到期</span>家庭教育产品代理协议</h4>
+			<div class="content">
+				<p><span>耗材货号</span>456464421</p>
+				<p><span>安装时间</span>2017年02月09日</p>
+				<p><span>到期时间</span>2017年02月09日</p>
+			</div>
+			<div class="operate">
+				<button class="cyan">编辑</button>
+				<button class="blue change">更换</button>
+			</div>
+		</li>
+		<li>
+			<h4 class="one-line"><span class="red hide">即将到期</span>家庭教育产品代理协议</h4>
+			<div class="content">
+				<p><span>耗材货号</span>456464421</p>
+				<p><span>安装时间</span>2017年02月09日</p>
+				<p><span>到期时间</span>2017年02月09日</p>
+			</div>
+			<div class="operate">
+				<button class="white">完成</button>
+			</div>
+		</li>
+		<li>
+			<h4 class="one-line"><span class="blue">待处理</span>家庭教育产品代理协议</h4>
+			<div class="content">
+				<p><span>耗材货号</span>456464421</p>
+				<p><span>安装时间</span>2017年02月09日</p>
+				<p><span>到期时间</span>2017年02月09日</p>
+			</div>
+			<div class="operate">
+				<button class="cyan">编辑</button>
+				<button class="blue change">更换</button>
+			</div>
+		</li>
+	</ul>
+	<div class="bottom-logo">
+		<img src="images/bot_logo.png"/>
+	</div>
+	<div class="meng consumptive-change">
+		<div class="meng-box">
+			<h4>耗材更换</h4>
+			<div class="select-box">
+				<select name="">
+					<option value="">耗材名称</option>
+				</select>
+				<select name="">
+					<option value="">耗材货号</option>
+				</select>
+				<select name="">
+					<option value="">更换日期</option>
+				</select>
+			</div>
+			<div class="flex">
+				<button>取消</button>
+				<button class="sub">确认</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.consumptive-material .operate .change').click(function(){
+			$('.consumptive-change').show();
+		})
+		$('.consumptive-change button').click(function(){
+			$('.consumptive-change').hide();
+		});
+	</script>
+</body>
+
+</html>

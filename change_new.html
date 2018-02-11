@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>以旧换新</title>
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<section class="new">
+		<div class="new-head">
+			<img src="images/head.png"/>
+			<h3>以旧换新申请表</h3>
+		</div>
+		<ul class="form">
+			<li>
+				<h5>1.姓名<label>*</label></h5>
+				<div>
+					<input type="text" name="" id="" value="" placeholder="填写您的姓名" />
+					<p>【请完成本题】</p>
+				</div>
+			</li>
+			<li>
+				<h5>2.单位<label>*</label></h5>
+				<div>
+					<input type="text" name="" id="" value="" placeholder="填写您的公司名称" />
+					<p>【请完成本题】</p>
+				</div>
+			</li>
+			<li>
+				<h5>3.电话<label>*</label></h5>
+				<div>
+					<input type="text" name="" id="" value="" placeholder="填写您的电话" />
+					<p>【请完成本题】</p>
+				</div>
+			</li>
+			<li>
+				<h5>4.邮箱<label>*</label></h5>
+				<div>
+					<input type="text" name="" id="" value="" placeholder="填写您的邮箱" />
+					<p>【请输入Email（比如test@askform.cn）】</p>
+				</div>
+			</li>
+			<li>
+				<h5>5.您现有纯水设备的品牌及型号<label>*</label></h5>
+				<div>
+					<input type="text" name="" id="" value="" placeholder="请输入" />
+					<p>【请完成本题】</p>
+				</div>
+			</li>
+			<li>
+				<h5>6.您现有设备的已使用年限<label>*</label></h5>
+				<div>
+					<input type="text" name="" id="" value="" placeholder="请输入" />
+					<p>【请完成本题】</p>
+				</div>
+			</li>
+			<li>
+				<h5>7.您希望置换的Milli-Q纯水设备的型号<label>*</label></h5>
+				<div>
+					<input type="text" name="" id="" value="" placeholder="请输入" />
+					<p>【请完成本题】</p>
+				</div>
+			</li>
+		</ul>
+		<div class="bottom-logo">
+			<img src="images/bot1.png"/>
+		</div>
+		<div style="height: 1rem;"></div>
+		<button class="sub">提交</button>
+	</section>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.new .form input').blur(function(){
+			if($(this).val()==''){
+				$(this).next().show();
+			}else{
+				$(this).next().hide();
+			}
+		})
+		$('.new .form input').focus(function(){
+			$(this).next().hide();
+		})
+	</script>
+</body>
+
+</html>
