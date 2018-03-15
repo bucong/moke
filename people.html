@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css" />
 	<script src="js/fontSize.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>-->
 </head>
 <body class="bg-grey">
 	<header class="people-head">
@@ -25,28 +25,28 @@
 			<li class="flex">
 				<span>姓名</span>
 				<div class="flex">
-					<input type="" name="" id="" disabled value="" placeholder="请输入" />
+					<input type="" name="" id="" disabled value="刘雪" placeholder="" />
 					<img src="images/text_del.png" class="del-content"/>
 				</div>
 			</li>
 			<li class="flex">
 				<span>职位</span>
 				<div class="flex">
-					<input type="" name="" id="" disabled value="" placeholder="请输入" />
+					<input type="" name="" id="" disabled value="" placeholder="" />
 					<img src="images/text_del.png" class="del-content"/>
 				</div>
 			</li>
 			<li class="flex">
 				<span>单位</span>
 				<div class="flex">
-					<input type="" name="" id="" disabled value="" placeholder="请输入" />
+					<input type="" name="" id="" disabled value="" placeholder="" />
 					<img src="images/text_del.png" class="del-content"/>
 				</div>
 			</li>
 			<li class="flex">
 				<span>手机</span>
 				<div class="flex">
-					<input type="" name="" id="" disabled value="" placeholder="请输入" />
+					<input type="" name="" id="" disabled value="15856324875" placeholder="" />
 					<img src="images/text_del.png" class="del-content"/>
 				</div>
 			</li>
@@ -105,26 +105,16 @@
 	</article>
 	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
-		$('.people-head span').toggle(function(){
+		$('.people-head span').click(function(){
 			$(this).html('完成');
 			$(this).css('color','#FFC832');
 			$('.people .info input').each(function(){
 				$(this).removeAttr('disabled');
+				$(this).attr('placeholder','请输入');
 			})
 			$('.people .info .del-content').each(function(){
 				$(this).show();
 			})
-		},function(){
-			$(this).html('编辑');
-			$(this).css('color','#333');
-			$('.people .info input').each(function(){
-				$(this).attr('disabled','disabled');
-			})
-			$('.people .info .del-content').each(function(){
-				$(this).hide();
-			})
-			//保存数据到后台
-			
 		})
 		$('.people .info .del-content').click(function(){
 			$(this).prev().val('');
